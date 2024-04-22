@@ -8,9 +8,7 @@ const Cart = () => {
     const cartProducts = useSelector(state => state.cart.cartProducts)
     const total = useSelector(state => state.cart.total)
     const dispatch = useDispatch()
-    console.log(cartProducts)
 
-    console.log(total)
     return (
         <Table className="mt-4">
             <thead>

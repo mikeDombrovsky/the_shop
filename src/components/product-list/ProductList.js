@@ -6,6 +6,7 @@ const ProductList = () => {
   const products = useSelector(state => state.product.products);
 
   return (
+      <>
     <Row className="mt-4">
       {products.map((p) => {
 
@@ -18,6 +19,10 @@ const ProductList = () => {
         );
       })}
     </Row>
+          {/*My son wrote this message, so I'm keeping it here, sorry for the inconvenience. =)*/}
+          <p>[ this is not real ; result is not guaranteed this is for entertainment <span style={{fontSize:'30px'}}>🥺</span>]</p>
+      </>
+
   );
 };
 

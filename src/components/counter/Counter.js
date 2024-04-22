@@ -4,7 +4,6 @@ import { Button, Input } from "reactstrap";
 class Counter extends React.Component {
 
   render() {
-      console.log(this.props.count);
     return (
       <div className="d-flex align-items-center">
         <Button color="danger" className="m-2" onClick={this.props.dec}>
@@ -16,7 +15,7 @@ class Counter extends React.Component {
             type="number" 
             value={this.props.count} 
             onChange={ (e)=> {
-                this.props.set( Number(e.target.value) );
+                this.props.set(e.target.value);
                 }
             } 
         />

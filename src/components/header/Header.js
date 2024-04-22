@@ -6,9 +6,9 @@ import styles from "./Header.module.css";
 const Header  = (props) => {
   return (
     <Navbar dark expand className={styles.bg}>
-      <NavbarBrand>The Shop</NavbarBrand>
+      <NavbarBrand>Blockz pizza bros</NavbarBrand>
       <Collapse navbar>
-        <ul className="navbar-nav m-auto">
+        <ul className="navbar-nav ml-auto">
           <li
             className={
               props.location.pathname === "/" ? "nav-item active" : "nav-item"
