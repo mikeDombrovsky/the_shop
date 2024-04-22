@@ -31,7 +31,6 @@ export const cartSlice = createSlice({
             state.total = getTotal(state);
         },
         setCount: (state, action) => {
-            console.log(action.payload);
             let product = state.cartProducts.find(p => p.id === action.payload.id);
             product.count = action.payload.count;
             state.total = getTotal(state);

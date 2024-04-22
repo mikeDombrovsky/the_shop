@@ -33,7 +33,7 @@ const Product = (props) => {
               count={count}
               inc={() => dispatch(incCount(props.product.id))}
               dec={() => dispatch(decCount(props.product.id))}
-              set={(count) => dispatch(setCount(props.product.id, count))}
+              set={(count) => dispatch(setCount({id:props.product.id, count}))}
             />
           ) : (
             <Button
