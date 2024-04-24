@@ -6,7 +6,10 @@ class Counter extends React.Component {
   render() {
     return (
       <div className="d-flex align-items-center">
-        <Button color="danger" className="m-2" onClick={this.props.dec}>
+        <Button color="danger" className="m-2" onClick={e => {
+            e.stopPropagation()
+            this.props.dec(e)
+        }}>
           -
         </Button>
         <Input
@@ -17,9 +20,13 @@ class Counter extends React.Component {
             onChange={ (e)=> {
                 this.props.set(e.target.value);
                 }
-            } 
+            }
+            onClick={(e) => e.stopPropagation()}
         />
-        <Button color="success" className="m-2" onClick={this.props.inc}>
+        <Button color="success" className="m-2" onClick={e => {
+            e.stopPropagation()
+            this.props.inc(e)
+        }}>
           +
         </Button>
       </div>

@@ -25,6 +25,7 @@ const Product = (props) => {
         let desc = e.target.closest('.card').querySelector('.pizza_desc');
         console.log(e.target, desc);
         desc.classList.toggle('d-none');
+        e.stopPropagation()
     }
 
     function setDescBlock(e) {
@@ -43,7 +44,7 @@ const Product = (props) => {
                     {props.product.desc}
                 </CardText>
                 {getCount(props.product.id, cartProducts) ? (
-                    <Counter
+                    <Counter onClick={(e) => e.stopPropagation()}
                         count={count}
                         inc={() => dispatch(incCount(props.product.id))}
                         dec={() => dispatch(decCount(props.product.id))}
@@ -53,7 +54,10 @@ const Product = (props) => {
                     <Button
                         color="success"
                         className="w-100 mt-2 mb-2"
-                        onClick={() => dispatch(addToCart(props.product))}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            dispatch(addToCart(props.product));
+                        }}
                     >
                         Add to card
                     </Button>
