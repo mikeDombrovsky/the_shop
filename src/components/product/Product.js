@@ -4,8 +4,6 @@ import Counter from "../counter/Counter";
 import {useDispatch, useSelector} from "react-redux";
 import styles from "./Product.module.css";
 import {addToCart, incCount, decCount, setCount} from "../../features/cart/cartSlice";
-import product_src from './product.png';
-import p1 from './product.png';
 
 const Product = (props) => {
     const cartProducts = useSelector(state => state.cart.cartProducts);
@@ -21,20 +19,20 @@ const Product = (props) => {
         return 0;
     }
 
-    function toggleDescNone(e) {
+    function showDescription(e) {
         let desc = e.target.closest('.card').querySelector('.pizza_desc');
-        console.log(e.target, desc);
-        desc.classList.toggle('d-none');
-        e.stopPropagation()
+        if (desc.classList.contains('d-none')) {
+            desc.classList.remove('d-none');
+        }
     }
 
-    function setDescBlock(e) {
+    function hideDescription(e) {
         let desc = e.target.closest('.card').querySelector('.pizza_desc');
-        desc.classList.remove('d-none');
+        desc.classList.add('d-none');
     }
 
     return (
-        <Card className={styles.card} onClick={e => toggleDescNone(e)}>
+        <Card className={styles.card} onMouseEnter={showDescription} onMouseLeave={hideDescription}>
             <CardBody className="text-center">
                 <img src={props.product.img_src} className={styles.img}/>
                 <CardTitle className={styles.title}>{props.product.title}</CardTitle>
@@ -44,7 +42,7 @@ const Product = (props) => {
                     {props.product.desc}
                 </CardText>
                 {getCount(props.product.id, cartProducts) ? (
-                    <Counter onClick={(e) => e.stopPropagation()}
+                    <Counter
                         count={count}
                         inc={() => dispatch(incCount(props.product.id))}
                         dec={() => dispatch(decCount(props.product.id))}
@@ -54,10 +52,7 @@ const Product = (props) => {
                     <Button
                         color="success"
                         className="w-100 mt-2 mb-2"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            dispatch(addToCart(props.product));
-                        }}
+                        onClick={() => dispatch(addToCart(props.product))}
                     >
                         Add to card
                     </Button>
