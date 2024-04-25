@@ -20,15 +20,14 @@ const Product = (props) => {
     }
 
     function showDescription(e) {
-        let desc = e.target.closest('.card').querySelector('.pizza_desc');
-        if (desc.classList.contains('d-none')) {
-            desc.classList.remove('d-none');
-        }
+        let desc = e.target.closest('.card').querySelector('#pizza_desc');
+        desc.style.gridTemplateRows = '1fr';
+
     }
 
     function hideDescription(e) {
-        let desc = e.target.closest('.card').querySelector('.pizza_desc');
-        desc.classList.add('d-none');
+        let desc = e.target.closest('.card').querySelector('#pizza_desc');
+        desc.style.gridTemplateRows = '0fr';
     }
 
     return (
@@ -38,8 +37,8 @@ const Product = (props) => {
                 <CardTitle className={styles.title}>{props.product.title}</CardTitle>
                 <CardSubtitle>{props.product.description}</CardSubtitle>
                 <CardSubtitle>$ {props.product.price}</CardSubtitle>
-                <CardText className='pizza_desc d-none'>
-                    {props.product.desc}
+                <CardText id='pizza_desc' className={styles.p_desc_container}>
+                    <div className={styles.p_desc}> {props.product.desc}</div>
                 </CardText>
                 {getCount(props.product.id, cartProducts) ? (
                     <Counter
