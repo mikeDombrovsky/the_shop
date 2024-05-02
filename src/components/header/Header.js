@@ -11,7 +11,7 @@ const Header  = (props) => {
         <ul className="navbar-nav ml-auto">
           <li
             className={
-              props.location.pathname.endswith("/the_shop")  ? "nav-item active" : "nav-item"
+              props.location.pathname.endsWith("/the_shop")  ? "nav-item active" : "nav-item"
             }
           >
             <Link className="nav-link" to="/the_shop">
@@ -20,7 +20,7 @@ const Header  = (props) => {
           </li>
           <li
             className={
-              props.location.pathname.endswith("/the_shop/cart")
+              props.location.pathname.endsWith("/the_shop/cart")
                 ? "nav-item active"
                 : "nav-item"
             }
