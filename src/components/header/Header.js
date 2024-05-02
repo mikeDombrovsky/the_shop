@@ -15,7 +15,7 @@ const Header  = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className={({isActive}) => (isActive ? "nav-link active" : "nav-link")} to="/the_shop/cart">
+            <NavLink className="nav-link"  to="/the_shop/cart">
               Cart
             </NavLink>
           </li>
