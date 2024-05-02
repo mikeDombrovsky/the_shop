@@ -11,12 +11,12 @@ const Header  = (props) => {
       <Collapse navbar>
         <ul className="navbar-nav ml-auto">
           <li className={isMainActive ? "nav-item active" : "nav-item"}>
-            <Link className="nav-link" to="/the_shop" onClick={setIsMainActive(true)}>
+            <Link className="nav-link" to="/the_shop">
               Home
             </Link>
           </li>
-          <li className={!isMainActive ? "nav-item active" : "nav-item"}>
-            <Link className="nav-link" to="/the_shop/cart" onClick={setIsMainActive(false)}>
+          <li className={isMainActive ? "nav-item" : "nav-item active"}>
+            <Link className="nav-link" to="/the_shop/cart">
               Cart
             </Link>
           </li>
