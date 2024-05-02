@@ -11,21 +11,21 @@ const Header  = (props) => {
         <ul className="navbar-nav ml-auto">
           <li
             className={
-              props.location.pathname === "/" ? "nav-item active" : "nav-item"
+              props.location.pathname === "/the_shop" ? "nav-item active" : "nav-item"
             }
           >
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/the_shop">
               Home
             </Link>
           </li>
           <li
             className={
-              props.location.pathname === "/cart"
+              props.location.pathname === "/the_shop/cart"
                 ? "nav-item active"
                 : "nav-item"
             }
           >
-            <Link className="nav-link" to="/cart">
+            <Link className="nav-link" to="/the_shop/cart">
               Cart
             </Link>
           </li>
