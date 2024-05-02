@@ -10,12 +10,12 @@ const Header  = () => {
       <Collapse navbar>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/the_shop">
+            <NavLink className={({isActive}) => (isActive ? "nav-link active" : "nav-link")} to="/the_shop" >
               Home
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/the_shop/cart">
+            <NavLink className={({isActive}) => (isActive ? "nav-link active" : "nav-link")} to="/the_shop/cart">
               Cart
             </NavLink>
           </li>
