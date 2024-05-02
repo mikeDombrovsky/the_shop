@@ -2,12 +2,14 @@
   "name": "05_04_20_hw",
   "version": "0.1.0",
   "private": true,
+    "homepage": "https://mikeDombrovsky.github.io/the_shop",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "gh-pages": "^6.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.9",
@@ -16,8 +18,10 @@
     "reactstrap": "^8.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts docs",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
