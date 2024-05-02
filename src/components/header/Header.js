@@ -10,7 +10,7 @@ const Header  = () => {
       <Collapse navbar>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <NavLink className={({isActive}) => (isActive ? "nav-link active" : "nav-link")} to="/the_shop" >
+            <NavLink className="nav-link" to="/the_shop" exact={true} >
               Home
             </NavLink>
           </li>
