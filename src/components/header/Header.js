@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, NavbarBrand, Collapse } from "reactstrap";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const Header  = (props) => {
@@ -11,14 +11,14 @@ const Header  = (props) => {
       <Collapse navbar>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <Link className="nav-link" to="/the_shop" activeClassName="active">
+            <NavLink className="nav-link" to="/the_shop" activeClassName="active">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/the_shop/cart" activeClassName="active">
+            <NavLink className="nav-link" to="/the_shop/cart" activeClassName="active">
               Cart
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </Collapse>
