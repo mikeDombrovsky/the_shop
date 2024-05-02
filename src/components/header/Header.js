@@ -3,8 +3,7 @@ import { Navbar, NavbarBrand, Collapse } from "reactstrap";
 import { Link, withRouter, NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 
-const Header  = (props) => {
-  const [isMainActive, setIsMainActive] = React.useState(true);
+const Header  = () => {
   return (
     <Navbar dark expand className={styles.bg}>
       <NavbarBrand>Blockz pizza bros</NavbarBrand>
