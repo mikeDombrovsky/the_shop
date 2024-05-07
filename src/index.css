@@ -12,3 +12,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.cart_table .counter input {
+        min-width: 50px !important;
+}
+
+@media only screen and (max-width: 500px) {
+  body .cart_table {
+    font-size: 0.7rem;
+  }
+    .cart_table .counter {
+        flex-direction: column;
+        width: fit-content;
+    }
+}

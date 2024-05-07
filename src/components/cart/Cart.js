@@ -12,8 +12,8 @@ const Cart = () => {
     return (
         <>
 
-            <Table className="mt-4">
-                <thead>
+            <Table className="mt-4 cart_table">
+                <thead >
                 <tr>
                     <th>#</th>
                     <th style={{width: "30%"}}>Product description</th>

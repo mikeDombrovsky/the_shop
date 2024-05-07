@@ -5,7 +5,7 @@ class Counter extends React.Component {
 
   render() {
     return (
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center counter">
         <Button color="danger" className="m-2" onClick={e => {
             e.stopPropagation()
             this.props.dec(e)
@@ -13,8 +13,7 @@ class Counter extends React.Component {
           -
         </Button>
         <Input
-            min="1" 
-            max="10" 
+            min="1"
             type="number" 
             value={this.props.count} 
             onChange={ (e)=> {
