@@ -2,27 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 .cart_table .counter input {
-        min-width: 50px !important;
+    min-width: 50px !important;
 }
 
 @media only screen and (max-width: 500px) {
-  body .cart_table {
-    font-size: 0.7rem;
-  }
+    body .cart_table {
+        font-size: 0.7rem;
+    }
+
     .cart_table .counter {
         flex-direction: column;
         width: fit-content;
+    }
+
+    .cart_table .counter button {
+        min-width: 50px !important;
+        margin: .5rem 0 !important;
     }
 }
